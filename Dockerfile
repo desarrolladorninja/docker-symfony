@@ -40,6 +40,6 @@ RUN pecl install xdebug redis \
   && docker-php-ext-enable xdebug redis
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
-RUN mkdir -p /var/www/public && echo "<h1 style='align: center;'>PHP/Apache for Symfony</h1><?php phpinfo(); ?>" > /var/www/public/index.php
+RUN mkdir -p /var/www/public && echo "<h1 style='text-align: center;'>PHP/Apache for Symfony</h1><?php phpinfo(); ?>" > /var/www/public/index.php
 
 WORKDIR /var/www
